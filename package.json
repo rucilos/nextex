@@ -1,0 +1,63 @@
+{
+    "private": true,
+    "name": "nextex",
+    "version": "1.0.0",
+    "scripts": {
+        "clean": "rimraf .next",
+        "build": "next build",
+        "dev": "next dev",
+        "lint": "next lint",
+        "format": "prettier --write \"**/*.{js,mjs,jsx,ts,tsx,json,css,scss,yml,md,mdx,graphql}\"",
+        "start": "next start",
+        "test": "jest",
+        "analyze": "ANALYZE=true next build",
+        "postinstall": "husky",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.{js,mjs,jsx,ts,tsx,json,css,scss,yml,md,mdx,graphql}": [
+            "yarn format"
+        ]
+    },
+    "dependencies": {
+        "@babel/core": "^7.27.4",
+        "@babel/runtime": "^7.27.6",
+        "@next/bundle-analyzer": "^15.3.3",
+        "@stylexjs/open-props": "0.11.1",
+        "@stylexjs/stylex": "0.13.1",
+        "lucide-react": "^0.515.0",
+        "next": "15.3.3",
+        "postcss": "^8.5.5",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "styled-jsx": "^5.1.7",
+        "webpack": "^5.99.9"
+    },
+    "devDependencies": {
+        "@stylexjs/eslint-plugin": "0.13.1",
+        "@stylexjs/postcss-plugin": "0.13.1",
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.3.0",
+        "@types/babel__core": "^7.20.5",
+        "@types/jest": "^29.5.14",
+        "@types/json-schema": "^7.0.15",
+        "@types/node": "^24.0.1",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@typescript-eslint/parser": "^8.34.0",
+        "autoprefixer": "^10.4.21",
+        "babel-loader": "^10.0.0",
+        "eslint": "^9.29.0",
+        "eslint-config-next": "15.3.3",
+        "husky": "^9.1.7",
+        "jest": "^30.0.0",
+        "jest-environment-jsdom": "30.0.0",
+        "lint-staged": "^16.1.2",
+        "prettier": "^3.5.3",
+        "rimraf": "^6.0.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3"
+    },
+    "packageManager": "yarn@4.9.1"
+}
